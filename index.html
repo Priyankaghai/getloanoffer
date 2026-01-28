@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GetLoanOffer - Get the best loan offers with low interest rates. Personal Loan, Home Loan, Business Loan, Car Loan - Compare and Apply Online.">
+    <title>GetLoanOffer - Best Loan Offers at Low Interest Rates</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+        <span>0%</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Get<span class="highlight">Loan</span>Offer</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#emi-calculator">EMI Calculator</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta">Apply Now</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Get Closer to Your Goals with <span class="gradient-text">Instant Loans</span></h1>
+                <p>Explore flexible loan options tailored to meet your needs. Low interest rates, quick approval, and hassle-free documentation.</p>
+                
+                <div class="hero-form">
+                    <h3>Get In Touch Now!</h3>
+                    <form id="hero-form" action="/submit" method="POST">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Full Name" required>
+                            <input type="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                            <select name="loan_type" required>
+                                <option value="">Select Loan Type</option>
+                                <option value="personal">Personal Loan</option>
+                                <option value="home">Home Loan</option>
+                                <option value="business">Business Loan</option>
+                                <option value="car">Car Loan</option>
+                                <option value="education">Education Loan</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <input type="number" name="amount" placeholder="Loan Amount (₹)" required>
+                        </div>
+                        <div class="consent">
+                            <input type="checkbox" id="consent" required>
+                            <label for="consent">I agree to the <a href="terms.html">Terms of Use</a> and <a href="privacy.html">Privacy Policy</a></label>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <span>Apply Now</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-illustration">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% Secure</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-bolt"></i>
+                        <span>Quick Approval</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-percentage"></i>
+                        <span>Low Interest</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">WE'VE GOT WHAT YOU NEED!</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Personal Loan</h3>
+                    <p>Get up to ₹40 Lakh with minimal documentation. Perfect for weddings, medical emergencies, or travel.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Home Loan</h3>
+                    <p>Make your dream home a reality with competitive interest rates and flexible EMI options.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Business Loan</h3>
+                    <p>Fuel your business growth with quick disbursement and customized repayment plans.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Car Loan</h3>
+                    <p>Drive your dream car home with attractive interest rates and up to 100% financing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education Loan</h3>
+                    <p>Invest in your future with education loans covering tuition, living expenses, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Gold Loan</h3>
+                    <p>Unlock the value of your gold with instant approval and best-in-class valuation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <p class="section-subtitle">THE SECRET IS IN THE PROCESS</p>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Apply Online</h3>
+                    <p>Fill out our simple online application form</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Document Verification</h3>
+                    <p>Submit required documents for quick verification</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Loan Approval</h3>
+                    <p>Get instant approval based on eligibility</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Disbursement</h3>
+                    <p>Receive funds directly in your bank account</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMI Calculator Section -->
+    <section class="emi-calculator" id="emi-calculator">
+        <div class="container">
+            <h2 class="section-title">EMI Calculator</h2>
+            <p class="section-description">Calculate your monthly EMI and plan your finances better</p>
+            
+            <div class="calculator-container">
+                <div class="calculator-inputs">
+                    <div class="input-group">
+                        <label>Loan Amount (₹)</label>
+                        <input type="range" id="loan-amount" min="50000" max="5000000" value="500000" step="10000">
+                        <div class="input-value">
+                            <span>₹50K</span>
+                            <input type="number" id="loan-amount-value" value="500000">
+                            <span>₹50L</span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Interest Rate (%)</label>
+                        <input type="range" id="interest-rate" min="5" max="25" value="10.5" step="0.1">
+                        <div class="input-value">
+                            <span>5%</span>
+                            <input type="number" id="interest-rate-value" value="10.5" step="0.1">
+                            <span>25%</span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Loan Tenure (Months)</label>
+                        <input type="range" id="loan-tenure" min="6" max="84" value="36">
+                        <div class="input-value">
+                            <span>6M</span>
+                            <input type="number" id="loan-tenure-value" value="36">
+                            <span>84M</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calculator-results">
+                    <div class="result-chart">
+                        <canvas id="emi-chart"></canvas>
+                    </div>
+                    <div class="result-details">
+                        <div class="result-item">
+                            <span class="result-label">Monthly EMI</span>
+                            <span class="result-value" id="monthly-emi">₹16,253</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Total Interest</span>
+                            <span class="result-value" id="total-interest">₹85,108</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Total Amount</span>
+                            <span class="result-value" id="total-amount">₹5,85,108</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn-primary">
+                        <span>Apply for This Loan</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="5">0</div>
+                    <span class="stat-suffix">+</span>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50000">0</div>
+                    <span class="stat-suffix">+</span>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="500">0</div>
+                    <span class="stat-suffix">Cr+</span>
+                    <p>Loans Disbursed</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="30">0</div>
+                    <span class="stat-suffix">+</span>
+                    <p>Partner Banks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="why-us-content">
+                <div class="why-us-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                </div>
+                <div class="why-us-text">
+                    <h2>WHY GET<span class="highlight">LOAN</span>OFFER?</h2>
+                    <p class="lead">Because your financial goals deserve the best solutions.</p>
+                    <p>Every individual requires uniquely tailored loan solutions based on their needs, income, and financial goals. Our process starts by understanding your requirements, followed by extensive research and comparison across multiple banks and NBFCs. We keep you at the center and create a loan roadmap that aligns with your short & long term financial strategies.</p>
+                    
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> No Collateral Required for Personal Loans</li>
+                        <li><i class="fas fa-check-circle"></i> Competitive Interest Rates from 10.5% p.a.</li>
+                        <li><i class="fas fa-check-circle"></i> Flexible Tenure up to 84 Months</li>
+                        <li><i class="fas fa-check-circle"></i> Quick Disbursement within 24-48 Hours</li>
+                        <li><i class="fas fa-check-circle"></i> Minimal Documentation</li>
+                        <li><i class="fas fa-check-circle"></i> No Hidden Charges</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">WHAT OUR CUSTOMERS SAY</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"GetLoanOffer made the entire loan process so simple. I got my personal loan approved within 24 hours and the interest rate was much better than what my bank offered!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RK</div>
+                        <div class="author-info">
+                            <h4>Rahul Kumar</h4>
+                            <span>Personal Loan - ₹5 Lakh</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"I was looking for a home loan and GetLoanOffer compared multiple banks for me. Their EMI calculator helped me plan my budget perfectly. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PS</div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <span>Home Loan - ₹35 Lakh</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"Needed a business loan urgently to expand my restaurant. GetLoanOffer team was extremely helpful and got me the best deal. The process was completely transparent."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AJ</div>
+                        <div class="author-info">
+                            <h4>Amit Joshi</h4>
+                            <span>Business Loan - ₹15 Lakh</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <h2 class="section-title">OUR BANKING PARTNERS</h2>
+            <div class="partners-slider">
+                <div class="partners-track">
+                    <div class="partner-logo">HDFC Bank</div>
+                    <div class="partner-logo">ICICI Bank</div>
+                    <div class="partner-logo">SBI</div>
+                    <div class="partner-logo">Axis Bank</div>
+                    <div class="partner-logo">Kotak</div>
+                    <div class="partner-logo">Yes Bank</div>
+                    <div class="partner-logo">IndusInd</div>
+                    <div class="partner-logo">Bajaj Finance</div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="partner-logo">HDFC Bank</div>
+                    <div class="partner-logo">ICICI Bank</div>
+                    <div class="partner-logo">SBI</div>
+                    <div class="partner-logo">Axis Bank</div>
+                    <div class="partner-logo">Kotak</div>
+                    <div class="partner-logo">Yes Bank</div>
+                    <div class="partner-logo">IndusInd</div>
+                    <div class="partner-logo">Bajaj Finance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>WE'RE YOUR PARTNER IN FINANCIAL GROWTH!</h2>
+                <ul class="cta-features">
+                    <li><i class="fas fa-check"></i> Multiple Loan Options</li>
+                    <li><i class="fas fa-check"></i> Best Interest Rates</li>
+                    <li><i class="fas fa-check"></i> Quick Approval Process</li>
+                    <li><i class="fas fa-check"></i> Dedicated Support</li>
+                </ul>
+                <div class="cta-box">
+                    <h3>Get Free* Consultation & Personalized Loan Plan</h3>
+                    <p class="worth">Worth ₹5,000/-</p>
+                    <a href="contact.html" class="btn-primary">
+                        <span>Connect Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text">Get<span class="highlight">Loan</span>Offer</span>
+                    </a>
+                    <p>Your trusted partner for all financial needs. We help you find the best loan offers from top banks and NBFCs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Loans</h4>
+                    <ul>
+                        <li><a href="services.html#personal">Personal Loan</a></li>
+                        <li><a href="services.html#home">Home Loan</a></li>
+                        <li><a href="services.html#business">Business Loan</a></li>
+                        <li><a href="services.html#car">Car Loan</a></li>
+                        <li><a href="services.html#education">Education Loan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 1800-XXX-XXXX (Toll Free)</li>
+                        <li><i class="fas fa-envelope"></i> info@getloanoffer.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GetLoanOffer. All Rights Reserved.</p>
+                <p><a href="terms.html">Terms and Conditions</a> | <a href="privacy.html">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
