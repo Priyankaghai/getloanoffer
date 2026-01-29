@@ -237,20 +237,56 @@ document.addEventListener('DOMContentLoaded', function() {
         calculateEMI();
     }
 
-    // Form Submission
+    // Form Submission - Google Sheets Integration
     const heroForm = document.getElementById('hero-form');
     const contactForm = document.getElementById('contact-form');
+    
+    // Google Apps Script URL
+    const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbwYd6sbDr1od5Jly84JapmDywmLIfyri2NhMZ2N3rjic2gTB7F6Yk_VZS_W6YKQtK06/exec';
 
-    function handleFormSubmit(e) {
+    async function handleFormSubmit(e) {
         e.preventDefault();
-        const formData = new FormData(e.target);
-        const data = Object.fromEntries(formData.entries());
+        const form = e.target;
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
         
-        // Here you would typically send data to server
-        console.log('Form submitted:', data);
+        // Show loading state
+        submitBtn.innerHTML = '<span>Submitting...</span> <i class="fas fa-spinner fa-spin"></i>';
+        submitBtn.disabled = true;
         
-        // For demo, redirect to thank you page
-        window.location.href = 'thankyou.html';
+        try {
+            // Collect form data
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name') || '',
+                email: formData.get('email') || '',
+                phone: formData.get('phone') || '',
+                loan_type: formData.get('loan_type') || '',
+                amount: formData.get('amount') || '',
+                employment: formData.get('employment') || '',
+                income: formData.get('income') || '',
+                city: formData.get('city') || '',
+                message: formData.get('message') || ''
+            };
+            
+            // Send to Google Sheets
+            await fetch(GOOGLE_SHEET_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+            
+            // Redirect to thank you page
+            window.location.href = 'thankyou.html';
+            
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            // Still redirect even if there's an error (no-cors doesn't return response)
+            window.location.href = 'thankyou.html';
+        }
     }
 
     if (heroForm) {
