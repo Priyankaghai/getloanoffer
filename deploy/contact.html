@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact GetLoanOffer - Apply for loans online or get in touch with our team for personalized assistance.">
+    <title>Contact Us - GetLoanOffer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+        <span>0%</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Get<span class="highlight">Loan</span>Offer</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="index.html#emi-calculator">EMI Calculator</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta">Apply Now</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact <span class="gradient-text">Us</span></h1>
+            <p>Get in touch with us for personalized loan assistance</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Let's Talk</h2>
+                    <p>Have questions about loans? Our team is here to help you find the perfect financial solution.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Call Us</h4>
+                                <p>1800-XXX-XXXX (Toll Free)</p>
+                                <p>+91-XXXXX-XXXXX</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email Us</h4>
+                                <p>info@getloanoffer.com</p>
+                                <p>support@getloanoffer.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Visit Us</h4>
+                                <p>123, Business Hub, Andheri West</p>
+                                <p>Mumbai, Maharashtra - 400053</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Working Hours</h4>
+                                <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 40px;">
+                        <h4 style="margin-bottom: 15px;">Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h3>Apply for Loan</h3>
+                    <form id="contact-form" class="contact-form" action="/submit" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loan_type">Loan Type *</label>
+                            <select id="loan_type" name="loan_type" required>
+                                <option value="">Select Loan Type</option>
+                                <option value="personal">Personal Loan</option>
+                                <option value="home">Home Loan</option>
+                                <option value="business">Business Loan</option>
+                                <option value="car">Car Loan</option>
+                                <option value="education">Education Loan</option>
+                                <option value="gold">Gold Loan</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">Loan Amount (₹) *</label>
+                            <input type="number" id="amount" name="amount" placeholder="Enter loan amount" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="employment">Employment Type *</label>
+                            <select id="employment" name="employment" required>
+                                <option value="">Select Employment Type</option>
+                                <option value="salaried">Salaried</option>
+                                <option value="self_employed">Self Employed</option>
+                                <option value="business_owner">Business Owner</option>
+                                <option value="professional">Professional</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="income">Monthly Income (₹) *</label>
+                            <input type="number" id="income" name="income" placeholder="Enter monthly income" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Information</label>
+                            <textarea id="message" name="message" placeholder="Tell us more about your requirements"></textarea>
+                        </div>
+                        <div class="consent" style="margin-bottom: 20px;">
+                            <input type="checkbox" id="consent" required>
+                            <label for="consent">I agree to the <a href="terms.html">Terms of Use</a> and <a href="privacy.html">Privacy Policy</a>. I authorize GetLoanOffer to contact me via SMS, email, and phone calls.</label>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <span>Submit Application</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Required -->
+    <section class="page-content" style="background: var(--bg-darker);">
+        <div class="container">
+            <h2 class="section-title">Documents Required</h2>
+            <p class="section-description">Keep these documents ready for a smooth application process</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>Identity Proof</h3>
+                    <p>Aadhaar Card, PAN Card, Passport, Voter ID, or Driving License</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Address Proof</h3>
+                    <p>Aadhaar Card, Utility Bills, Passport, or Rental Agreement</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>Income Proof</h3>
+                    <p>Salary Slips (3 months), Bank Statements (6 months), ITR</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Employment Proof</h3>
+                    <p>Employment Certificate, Offer Letter, or Business Registration</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Photographs</h3>
+                    <p>Recent passport-size photographs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Other Documents</h3>
+                    <p>Property documents (for secured loans), Academic records (for education loans)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="page-content" style="background: var(--bg-dark);">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="feature-card" style="margin-bottom: 20px; text-align: left;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">How long does the loan approval take?</h3>
+                    <p>For personal loans, approval typically takes 24-48 hours. For secured loans like home loans, it may take 5-7 working days depending on document verification.</p>
+                </div>
+                <div class="feature-card" style="margin-bottom: 20px; text-align: left;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">Is there any fee for using GetLoanOffer?</h3>
+                    <p>No, our services are completely free for borrowers. We are paid by the lending partners, so you don't have to pay us anything.</p>
+                </div>
+                <div class="feature-card" style="margin-bottom: 20px; text-align: left;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">What credit score is required for a loan?</h3>
+                    <p>Generally, a credit score of 650+ is considered good for personal loans. For home loans, lenders prefer a score of 700+. However, we can help you explore options even with lower scores.</p>
+                </div>
+                <div class="feature-card" style="margin-bottom: 20px; text-align: left;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">Can I apply for multiple loans?</h3>
+                    <p>Yes, you can apply for multiple loans if your income and credit profile support it. However, we recommend discussing with our experts to understand the best approach.</p>
+                </div>
+                <div class="feature-card" style="text-align: left;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">How is my data protected?</h3>
+                    <p>We take data security very seriously. All your information is encrypted and stored securely. We never share your data with unauthorized third parties.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text">Get<span class="highlight">Loan</span>Offer</span>
+                    </a>
+                    <p>Your trusted partner for all financial needs. We help you find the best loan offers from top banks and NBFCs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Loans</h4>
+                    <ul>
+                        <li><a href="services.html#personal">Personal Loan</a></li>
+                        <li><a href="services.html#home">Home Loan</a></li>
+                        <li><a href="services.html#business">Business Loan</a></li>
+                        <li><a href="services.html#car">Car Loan</a></li>
+                        <li><a href="services.html#education">Education Loan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 1800-XXX-XXXX (Toll Free)</li>
+                        <li><i class="fas fa-envelope"></i> info@getloanoffer.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GetLoanOffer. All Rights Reserved.</p>
+                <p><a href="terms.html">Terms and Conditions</a> | <a href="privacy.html">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        // Pre-fill loan type from URL parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const loanType = urlParams.get('type');
+            if (loanType) {
+                const select = document.getElementById('loan_type');
+                if (select) {
+                    select.value = loanType;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
